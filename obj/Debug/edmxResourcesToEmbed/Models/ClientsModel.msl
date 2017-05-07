@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GabinetWetDBModelStoreContainer" CdmEntityContainer="GabinetWetDBEntities1">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="GabinetWetDBModel.Clients">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Imie_wlasciciela" ColumnName="Imie_wlasciciela" />
+          <ScalarProperty Name="Nazwisko_wlasciciela" ColumnName="Nazwisko_wlasciciela" />
+          <ScalarProperty Name="Numer_telefonu" ColumnName="Numer_telefonu" />
+          <ScalarProperty Name="Aders" ColumnName="Aders" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

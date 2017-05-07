@@ -1,0 +1,50 @@
+﻿@model Praca_dyplomowa.Models.Clients
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Clients</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Imie_wlasciciela)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Imie_wlasciciela)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nazwisko_wlasciciela)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nazwisko_wlasciciela)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numer_telefonu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numer_telefonu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aders)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aders)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

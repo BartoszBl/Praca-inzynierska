@@ -1,0 +1,42 @@
+﻿@model Praca_dyplomowa.Models.Storeroom
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Storeroom</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nazwa_leku)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nazwa_leku)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_waznosci)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data_waznosci)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ilosc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ilosc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

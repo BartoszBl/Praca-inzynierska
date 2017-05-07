@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GabinetWetDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imie_wlasciciela" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Nazwisko_wlasciciela" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Numer_telefonu" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Aders" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="GabinetWetDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="Self.Clients" />
+  </EntityContainer>
+</Schema>

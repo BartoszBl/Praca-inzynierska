@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GabinetWetDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Operations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imie_wlasciciela" Type="nchar" MaxLength="100" />
+    <Property Name="Nazwisko_wlasciciela" Type="nchar" MaxLength="100" />
+    <Property Name="Imie_zwierzecia" Type="nchar" MaxLength="100" />
+    <Property Name="Gatunek" Type="nchar" MaxLength="100" />
+    <Property Name="Rodzaj_operacji" Type="nchar" MaxLength="100" />
+    <Property Name="Opis_operacji" Type="nchar" MaxLength="100" />
+    <Property Name="Data_operacji" Type="date" />
+  </EntityType>
+  <EntityContainer Name="GabinetWetDBModel1StoreContainer">
+    <EntitySet Name="Operations" EntityType="Self.Operations" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

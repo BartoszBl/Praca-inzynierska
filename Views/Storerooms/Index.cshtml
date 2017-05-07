@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Praca_dyplomowa.Models.Storeroom>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nazwa_leku)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_waznosci)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ilosc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nazwa_leku)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_waznosci)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ilosc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

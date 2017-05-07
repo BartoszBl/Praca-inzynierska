@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Praca_dyplomowa.Models.Clients>
+
+@{
+    ViewBag.Title = "Klienci";
+}
+
+<h2>Klienci</h2>
+
+<p>
+    @Html.ActionLink("Dodaj nowego klienta", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Imie_wlasciciela)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nazwisko_wlasciciela)
+        </th>
+       <!-- <th>
+            @Html.DisplayNameFor(model => model.Numer_telefonu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aders)
+        </th>-->
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Imie_wlasciciela)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nazwisko_wlasciciela)
+        </td>
+     <!--   <td>
+            @Html.DisplayFor(modelItem => item.Numer_telefonu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aders)
+        </td>-->
+        <td>
+            @Html.ActionLink("Edytuj", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Szczegóły", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Ususń klienta", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
