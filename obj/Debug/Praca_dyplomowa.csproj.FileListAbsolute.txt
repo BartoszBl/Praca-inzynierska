@@ -80,4 +80,9 @@ C:\Users\Bartosz\Desktop\Informatyka 2016-2017\Praca Dyplomowa\Praca_dyplomowa\b
 C:\Users\Bartosz\Desktop\Informatyka 2016-2017\Praca Dyplomowa\Praca_dyplomowa\obj\Debug\Praca_dyplomowa.dll
 C:\Users\Bartosz\Desktop\Informatyka 2016-2017\Praca Dyplomowa\Praca_dyplomowa\obj\Debug\Praca_dyplomowa.pdb
 C:\Users\Bartosz\Desktop\Informatyka 2016-2017\Praca Dyplomowa\Praca_dyplomowa\bin\DayPilot.Web.Mvc.dll
+C:\Users\Bartosz\Desktop\Informatyka 2016-2017\Praca Dyplomowa\Praca_dyplomowa\bin\itextsharp.dll
+C:\Users\Bartosz\Desktop\Informatyka 2016-2017\Praca Dyplomowa\Praca_dyplomowa\bin\itextsharp.pdfa.dll
+C:\Users\Bartosz\Desktop\Informatyka 2016-2017\Praca Dyplomowa\Praca_dyplomowa\bin\itextsharp.xtra.dll
+C:\Users\Bartosz\Desktop\Informatyka 2016-2017\Praca Dyplomowa\Praca_dyplomowa\bin\itextsharp.xml
+C:\Users\Bartosz\Desktop\Informatyka 2016-2017\Praca Dyplomowa\Praca_dyplomowa\bin\Rotativa.dll
 C:\Users\Bartosz\Desktop\Informatyka 2016-2017\Praca Dyplomowa\Praca_dyplomowa\obj\Debug\Praca_dyplomowa.csprojResolveAssemblyReference.cache

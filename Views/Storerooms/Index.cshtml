@@ -1,13 +1,11 @@
 ﻿@model IEnumerable<Praca_dyplomowa.Models.Storeroom>
 
-@{
-    ViewBag.Title = "Index";
-}
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
+<h2>Magazyn leków</h2>
+
+<p align="right">
+    @Html.ActionLink("Dodaj lek", "Create", new { @type = "button" }, new { @class = "btn btn-success" })
 </p>
 <table class="table">
     <tr>
@@ -17,7 +15,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Data_waznosci)
         </th>
-        <th>
+       <th>
             @Html.DisplayNameFor(model => model.Ilosc)
         </th>
         <th></th>
@@ -31,13 +29,14 @@
         <td>
             @Html.DisplayFor(modelItem => item.Data_waznosci)
         </td>
-        <td>
+       <td>
             @Html.DisplayFor(modelItem => item.Ilosc)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+           @Html.ActionLink("Edytuj", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
+
+        @Html.ActionLink("Szczegóły", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
+        @Html.ActionLink("Usuń lek", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

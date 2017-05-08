@@ -1,13 +1,12 @@
 ﻿@model IEnumerable<Praca_dyplomowa.Models.Operations>
 
-@{
-    ViewBag.Title = "Index";
-}
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
+<h2>Spis przeprowadzonych operacji</h2>
+
+<p align="right">
+    @Html.ActionLink("Dodaj przeprowadzoną operację", "Create", new { @type = "button" }, new { @class = "btn btn-success" })
+
 </p>
 <table class="table">
     <tr>
@@ -26,9 +25,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Rodzaj_operacji)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Opis_operacji)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.Data_operacji)
         </th>
@@ -52,16 +49,15 @@
         <td>
             @Html.DisplayFor(modelItem => item.Rodzaj_operacji)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Opis_operacji)
-        </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.Data_operacji)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edytuj", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
+
+            @Html.ActionLink("Szczegóły", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Usuń dane o operaci", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
