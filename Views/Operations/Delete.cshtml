@@ -3,76 +3,78 @@
 
 
 
+<div class="jumbotron">
+    <h3>Jesteś pewien, że chcesz usunąć dane o zabiegu?</h3>
+    <div>
 
-<h3>Jesteś pewien, że chcesz usunąć dane o operacji?</h3>
-<div>
-    
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Imie_wlasciciela)
-        </dt>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Imie_wlasciciela)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Imie_wlasciciela)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Imie_wlasciciela)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Nazwisko_wlasciciela)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Nazwisko_wlasciciela)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nazwisko_wlasciciela)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Nazwisko_wlasciciela)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Imie_zwierzecia)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Imie_zwierzecia)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Imie_zwierzecia)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Imie_zwierzecia)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Gatunek)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Gatunek)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Gatunek)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Gatunek)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Rodzaj_operacji)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Rodzaj_operacji)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Rodzaj_operacji)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Rodzaj_operacji)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Opis_operacji)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Opis_operacji)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Opis_operacji)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Opis_operacji)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Data_operacji)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Data_operacji)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Data_operacji)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Data_operacji)
+            </dd>
 
-    </dl>
+        </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Tak, usuń" class="btn btn-danger" />
-            @Html.ActionLink("Powrót do spisu operacji", "Index", new { @type = "button" }, new { @class = "btn btn-info" })
+            <div class="form-actions no-color">
+                <input type="submit" value="Tak, usuń" class="btn btn-danger" />
+                @Html.ActionLink("Powrót do spisu operacji", "Index", new { @type = "button" }, new { @class = "btn btn-info" })
+            </div>
+
         </div>
-    
-</div>
+    <</div>

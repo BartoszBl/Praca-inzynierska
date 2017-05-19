@@ -1,65 +1,67 @@
 ﻿@model IEnumerable<Praca_dyplomowa.Models.Operations>
 
 
+<div class="jumbotron">
+    <h2>Spis przeprowadzonych zabiegów</h2>
 
-<h2>Spis przeprowadzonych operacji</h2>
+    <p align="right">
+        @Html.ActionLink("Dodaj przeprowadzony zabieg", "Create", new { @type = "button" }, new { @class = "btn btn-success" })
 
-<p align="right">
-    @Html.ActionLink("Dodaj przeprowadzoną operację", "Create", new { @type = "button" }, new { @class = "btn btn-success" })
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Imie_wlasciciela)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nazwisko_wlasciciela)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imie_zwierzecia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gatunek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rodzaj_operacji)
+            </th>
 
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Imie_wlasciciela)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nazwisko_wlasciciela)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Imie_zwierzecia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Gatunek)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Rodzaj_operacji)
-        </th>
-        
-        <th>
-            @Html.DisplayNameFor(model => model.Data_operacji)
-        </th>
-        <th></th>
-    </tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Data_operacji)
+            </th>
+            <th></th>
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Imie_wlasciciela)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nazwisko_wlasciciela)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Imie_zwierzecia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Gatunek)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Rodzaj_operacji)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.Data_operacji)
-        </td>
-        <td>
-            @Html.ActionLink("Edytuj", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Imie_wlasciciela)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nazwisko_wlasciciela)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Imie_zwierzecia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gatunek)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rodzaj_operacji)
+                </td>
 
-            @Html.ActionLink("Szczegóły", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
-            @Html.ActionLink("Usuń dane o operaci", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
-        </td>
-    </tr>
-}
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data_operacji)
+                </td>
+                <td>
+                    @Html.ActionLink("Edytuj", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
 
-</table>
+                    @Html.ActionLink("Szczegóły", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Usuń dane o operaci", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>
+    </div>

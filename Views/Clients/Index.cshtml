@@ -1,51 +1,53 @@
 ﻿@model IEnumerable<Praca_dyplomowa.Models.Clients>
 
+<div class="jumbotron">
+    <h2>Spis klientów gabinetu weterynaryjnego</h2>
 
-<h2>Spis klientów gabinetu weterynaryjnego</h2>
+    <p align="right">
+        @Html.ActionLink("Dodaj nowego klienta", "Create", new { @type = "button" }, new { @class = "btn btn-success" })
 
-<p align="right">
-    @Html.ActionLink("Dodaj nowego klienta", "Create", new { @type = "button" }, new { @class = "btn btn-success" })
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Imie_wlasciciela)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nazwisko_wlasciciela)
+            </th>
+            <!-- <th>
+                 @Html.DisplayNameFor(model => model.Numer_telefonu)
+             </th>
+             <th>
+                 @Html.DisplayNameFor(model => model.Aders)
+             </th>-->
+            <th></th>
+        </tr>
 
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Imie_wlasciciela)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nazwisko_wlasciciela)
-        </th>
-       <!-- <th>
-            @Html.DisplayNameFor(model => model.Numer_telefonu)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Aders)
-        </th>-->
-        <th></th>
-    </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Imie_wlasciciela)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nazwisko_wlasciciela)
+                </td>
+                <!--   <td>
+                       @Html.DisplayFor(modelItem => item.Numer_telefonu)
+                   </td>
+                   <td>
+                       @Html.DisplayFor(modelItem => item.Aders)
+                   </td>-->
+                <td>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Imie_wlasciciela)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nazwisko_wlasciciela)
-        </td>
-     <!--   <td>
-            @Html.DisplayFor(modelItem => item.Numer_telefonu)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Aders)
-        </td>-->
-        <td>
-            
-            @Html.ActionLink("Edytuj", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" }) 
-       
-            @Html.ActionLink("Szczegóły", "Details", new { id = item.Id }, new { @class = "btn btn-info" }) 
-            @Html.ActionLink("Usuń klienta", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
-        </td>
-    </tr>
-}
+                    @Html.ActionLink("Edytuj", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
 
-</table>
+                    @Html.ActionLink("Szczegóły", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Usuń klienta", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>
+    </div>

@@ -1,44 +1,46 @@
 ﻿@model Praca_dyplomowa.Models.Storeroom
 
+<div class="jumbotron">
 
+    <h3>Czy jesteś pewien, że chcesz usunąc lek z magazynu?</h3>
+    <div>
 
-<h3>Czy jesteś pewien, że chcesz usunąc lek z magazynu?</h3>
-<div>
-    
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nazwa_leku)
-        </dt>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nazwa_leku)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nazwa_leku)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Nazwa_leku)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Data_waznosci)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Data_waznosci)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Data_waznosci)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Data_waznosci)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Ilosc)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Ilosc)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Ilosc)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Ilosc)
+            </dd>
 
-    </dl>
+        </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Tak, usuń" class="btn btn-danger" /> 
-            @Html.ActionLink("Powrót do spisu magazynu", "Index", new { @type = "button" }, new { @class = "btn btn-info" })
-        </div>
-    }
-</div>
+            <div class="form-actions no-color">
+                <input type="submit" value="Tak, usuń" class="btn btn-danger" />
+                @Html.ActionLink("Powrót do spisu magazynu", "Index", new { @type = "button" }, new { @class = "btn btn-info" })
+            </div>
+        }
+    </div>
+    </div>

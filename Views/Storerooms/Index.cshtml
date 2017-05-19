@@ -1,44 +1,46 @@
 ﻿@model IEnumerable<Praca_dyplomowa.Models.Storeroom>
 
 
+<div class="jumbotron">
+    <h2>Magazyn leków</h2>
 
-<h2>Magazyn leków</h2>
+    <p align="right">
+        @Html.ActionLink("Dodaj lek", "Create", new { @type = "button" }, new { @class = "btn btn-success" })
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nazwa_leku)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data_waznosci)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ilosc)
+            </th>
+            <th></th>
+        </tr>
 
-<p align="right">
-    @Html.ActionLink("Dodaj lek", "Create", new { @type = "button" }, new { @class = "btn btn-success" })
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nazwa_leku)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Data_waznosci)
-        </th>
-       <th>
-            @Html.DisplayNameFor(model => model.Ilosc)
-        </th>
-        <th></th>
-    </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nazwa_leku)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data_waznosci)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ilosc)
+                </td>
+                <td>
+                    @Html.ActionLink("Edytuj", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nazwa_leku)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Data_waznosci)
-        </td>
-       <td>
-            @Html.DisplayFor(modelItem => item.Ilosc)
-        </td>
-        <td>
-           @Html.ActionLink("Edytuj", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
+                    @Html.ActionLink("Szczegóły", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Usuń lek", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
 
-        @Html.ActionLink("Szczegóły", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
-        @Html.ActionLink("Usuń lek", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
-        </td>
-    </tr>
-}
-
-</table>
+    </table>
+    </div>

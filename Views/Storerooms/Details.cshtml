@@ -1,40 +1,42 @@
 ﻿@model Praca_dyplomowa.Models.Storeroom
 
 
+<div class="jumbotron">
+    <h2>Szczegóły leku</h2>
 
-<h2>Szczegóły leku</h2>
+    <div>
 
-<div>
-    
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nazwa_leku)
-        </dt>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nazwa_leku)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nazwa_leku)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Nazwa_leku)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Data_waznosci)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Data_waznosci)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Data_waznosci)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Data_waznosci)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Ilosc)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Ilosc)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Ilosc)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Ilosc)
+            </dd>
 
-    </dl>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edycja", "Edit", new { id = Model.Id }, new { @class = "btn btn-warning" })
+        @Html.ActionLink("Powrót do spisu magazynu", "Index", new { @type = "button" }, new { @class = "btn btn-info" })
+    </p>
+
 </div>
-<p>
-    @Html.ActionLink("Edycja", "Edit", new { id = Model.Id }, new { @class = "btn btn-warning" }) 
-    @Html.ActionLink("Powrót do spisu magazynu", "Index", new { @type = "button" }, new { @class = "btn btn-info" })
-</p>

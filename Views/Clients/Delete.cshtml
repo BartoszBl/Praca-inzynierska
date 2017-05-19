@@ -3,52 +3,54 @@
 
 
 
+<div class="jumbotron">
+    <h3>Czy jesteś pewien, że chcesz usunąć tego klienta:</h3>
+    <div>
 
-<h3>Czy jesteś pewien, że chcesz usunąć tego klienta:</h3>
-<div>
-    
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Imie_wlasciciela)
-        </dt>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Imie_wlasciciela)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Imie_wlasciciela)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Imie_wlasciciela)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Nazwisko_wlasciciela)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Nazwisko_wlasciciela)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nazwisko_wlasciciela)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Nazwisko_wlasciciela)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Numer_telefonu)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Numer_telefonu)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Numer_telefonu)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Numer_telefonu)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Aders)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Aders)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Aders)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Aders)
+            </dd>
 
-    </dl>
+        </dl>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Tak, usuń" class="btn btn-danger" /> 
-            @Html.ActionLink("Powrót do listy klientów", "Index", new { @type = "button" }, new { @class = "btn btn-info" })
-        </div>
-    }
-</div>
+            <div class="form-actions no-color">
+                <input type="submit" value="Tak, usuń" class="btn btn-danger" />
+                @Html.ActionLink("Powrót do listy klientów", "Index", new { @type = "button" }, new { @class = "btn btn-info" })
+            </div>
+        }
+    </div>
+    </div>

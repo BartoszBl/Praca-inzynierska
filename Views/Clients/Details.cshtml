@@ -1,48 +1,49 @@
 ﻿@model Praca_dyplomowa.Models.Clients
 
 
+<div class="jumbotron">
+    <h2>Szczegóły klienta </h2>
 
-<h2>Szczegóły klienta </h2>
+    <div>
 
-<div>
-   
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Imie_wlasciciela)
-        </dt>
+        <hr />
+        <dl class="dl-horizontal"> 
+            <dt>
+                @Html.DisplayNameFor(model => model.Imie_wlasciciela)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Imie_wlasciciela)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Imie_wlasciciela)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Nazwisko_wlasciciela)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Nazwisko_wlasciciela)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nazwisko_wlasciciela)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Nazwisko_wlasciciela)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Numer_telefonu)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Numer_telefonu)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Numer_telefonu)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Numer_telefonu)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Aders)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Aders)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Aders)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Aders)
+            </dd>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edycja", "Edit", new { id = Model.Id }, new { @class = "btn btn-warning" }) 
-   @Html.ActionLink("Powrót do listy klientów", "Index", new { @type = "button" }, new { @class = "btn btn-info" })
-</p>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edycja", "Edit", new { id = Model.Id }, new { @class = "btn btn-warning" })
+        @Html.ActionLink("Powrót do listy klientów", "Index", new { @type = "button" }, new { @class = "btn btn-info" })
+    </p>
+    </div>
