@@ -4179,7 +4179,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   padding: 15px 15px;
-  font-size: 18px;
+  font-size: 40px;
   line-height: 20px;
 }
 
@@ -4913,6 +4913,7 @@ a.list-group-item.active > .badge,
 }
 
 .jumbotron {
+    
   padding: 30px;
   margin-bottom: 30px;
   font-size: 16px;
@@ -4952,11 +4953,11 @@ a.list-group-item.active > .badge,
 /*Kafelek*/
 
 .jumbo {
-  padding: 30px;
-  margin-bottom: 30px;
+  padding: 60px;
+  margin-bottom: 150px;
   font-size: 16px;
-  font-weight: 200;
-  line-height: 2.1428571435;
+  font-weight: normal;
+  line-height: 70%;
   color: inherit;
   background-color: #eeeeee;
 }
@@ -4976,15 +4977,15 @@ a.list-group-item.active > .badge,
 
 @media screen and (min-width: 768px) {
   .jumbo {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 10px;
+    padding-bottom: 180px;
   }
   .container .jumbo {
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 6px;
+    padding-left: 6px;
   }
   .jumbo h1 {
-    font-size: 63px;
+    font-size: 16px;
   }
 }
 

@@ -21,12 +21,25 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Klienci", "Index", "Clients")</li>
-                    <li>@Html.ActionLink("Zabiegi", "Index", "Operations")</li>
-                    <li>@Html.ActionLink("Magazyn", "Index", "Storerooms")</li>
+
                     <li>@Html.ActionLink("Galeria", "Index", "Gallery")</li>
                     <li>@Html.ActionLink("Nasz oferta", "Index", "Offer")</li>
                     <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+                 
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Lecznica ↓
+                        </a>
+                        <ul type="button" class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Klienci", "Index", "Clients")</li>
+                            <li>@Html.ActionLink("Zabiegi", "Index", "Operations")</li>
+                            <li>@Html.ActionLink("Magazyn", "Index", "Storerooms")</li>
+                        </ul>
+                    </li>
+
+
+                   
+                    
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

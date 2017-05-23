@@ -10,9 +10,7 @@
     </p>
     <table class="table">
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Imie_wlasciciela)
-            </th>
+            
             <th>
                 @Html.DisplayNameFor(model => model.Nazwisko_wlasciciela)
             </th>
@@ -35,9 +33,7 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Imie_wlasciciela)
-                </td>
+                
                 <td>
                     @Html.DisplayFor(modelItem => item.Nazwisko_wlasciciela)
                 </td>
@@ -58,7 +54,7 @@
                     @Html.ActionLink("Edytuj", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
 
                     @Html.ActionLink("Szczegóły", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
-                    @Html.ActionLink("Usuń dane o operaci", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                    @Html.ActionLink("Usuń dane", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }

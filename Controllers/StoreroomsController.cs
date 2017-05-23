@@ -10,6 +10,7 @@ using Praca_dyplomowa.Models;
 
 namespace Praca_dyplomowa.Controllers
 {
+    [Authorize]
     public class StoreroomsController : Controller
     {
         private GabinetWetDBEntities3 db = new GabinetWetDBEntities3();
