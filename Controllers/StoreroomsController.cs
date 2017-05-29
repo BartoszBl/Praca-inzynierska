@@ -21,6 +21,25 @@ namespace Praca_dyplomowa.Controllers
             return View(db.Storeroom.ToList());
         }
 
+
+        [HttpPost]
+        public ActionResult Index(string ZnajdzLek)
+        {
+
+            var lek = from i in db.Storeroom
+                          select i;
+            //jeśli coś przesłano, to wyszukaj po tym
+            if (!String.IsNullOrEmpty(ZnajdzLek))
+            {
+                lek = from i in db.Storeroom
+                          where i.Nazwa_leku.Equals(ZnajdzLek)
+                          select i;
+            }
+
+            return View(lek.ToList());
+        }
+
+
         // GET: Storerooms/Details/5
         public ActionResult Details(int? id)
         {

@@ -4,6 +4,15 @@
 <div class="jumbotron">
     <h2>Magazyn leków</h2>
 
+    @using (Html.BeginForm())
+    {
+
+        <div>
+            @Html.TextBox("ZnajdzLek")
+            <input type="submit" value="Szukaj" />
+        </div>
+    }
+
     <p align="right">
         @Html.ActionLink("Dodaj lek", "Create", new { @type = "button" }, new { @class = "btn btn-success" })
     </p>

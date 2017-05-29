@@ -4,6 +4,15 @@
 <div class="jumbotron">
     <h2>Spis przeprowadzonych zabiegów</h2>
 
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.TextBox("ZnajdzZabieg")
+    <input type="submit" value="Szukaj" />
+</div>
+}
+
     <p align="right">
         @Html.ActionLink("Dodaj przeprowadzony zabieg", "Create", new { @type = "button" }, new { @class = "btn btn-success" })
 

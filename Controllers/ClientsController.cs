@@ -21,6 +21,23 @@ namespace Praca_dyplomowa.Controllers
             return View(db.Clients.ToList());
         }
 
+[HttpPost]
+        public ActionResult Index(string ZnajdzKlienta)
+        {
+            
+            var clients = from i in db.Clients
+                       select i;
+            //jeśli coś przesłano, to wyszukaj po tym
+            if (!String.IsNullOrEmpty(ZnajdzKlienta))
+            {
+                clients = from i in db.Clients
+                       where i.Nazwisko_wlasciciela.Equals(ZnajdzKlienta)
+                       select i;
+            }
+
+            return View(clients.ToList());
+        }
+
         // GET: Clients/Details/5
         public ActionResult Details(int? id)
         {

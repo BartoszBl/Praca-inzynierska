@@ -21,6 +21,23 @@ namespace Praca_dyplomowa.Controllers
             return View(db.Operations.ToList());
         }
 
+
+        [HttpPost]
+        public ActionResult Index(string ZnajdzZabieg)
+        {
+
+            var zabieg = from i in db.Operations
+                          select i;
+            //jeśli coś przesłano, to wyszukaj po tym
+            if (!String.IsNullOrEmpty(ZnajdzZabieg))
+            {
+                zabieg = from i in db.Operations
+                          where i.Nazwisko_wlasciciela.Equals(ZnajdzZabieg)
+                          select i;
+            }
+
+            return View(zabieg.ToList());
+        }
         // GET: Operations/Details/5
         public ActionResult Details(int? id)
         {

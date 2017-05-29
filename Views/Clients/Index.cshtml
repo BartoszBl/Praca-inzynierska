@@ -3,10 +3,19 @@
 <div class="jumbotron">
     <h2>Spis klientów gabinetu weterynaryjnego</h2>
 
-    <p align="right">
-        @Html.ActionLink("Dodaj nowego klienta", "Create", new { @type = "button" }, new { @class = "btn btn-success" })
 
-    </p>
+   
+    
+     @using (Html.BeginForm())
+     {
+        
+        <div>@Html.TextBox("ZnajdzKlienta")
+        <input type="submit" value="Szukaj klienta" />
+    </div>
+     }
+  
+                    <p align="right">  @Html.ActionLink("Dodaj nowego klienta", "Create", new { @type = "button" }, new { @class = "btn btn-success" })</p>
+
     <table class="table">
         <tr>
             <th>
